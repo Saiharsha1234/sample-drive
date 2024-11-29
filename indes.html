@@ -3,9 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Responsive Login Page</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, h3, p, a, input, button {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {  
+            background-color: #f3f4f6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Header Styles */
+        header {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #00457c;
+            color: white;
+            text-align: center;
+        }
+
+        header .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Login Container */
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Login Form */
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .login-form label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            text-align: left;
+        }
+
+        .login-form input {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-form input:focus {
+            outline: none;
+            border-color: #00457c;
+        }
+
+        .login-form .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        .login-form .remember-forgot a {
+            color: #00457c;
+            text-decoration: none;
+        }
+
+        .login-form .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+
+        /* Button */
+        .btn {
+            background-color: #00457c;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #00345e;
+        }
+
+        /* Signup Link */
+        .signup-link {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .signup-link a {
+            color: #00457c;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <div class="logo">
+            <a href="#">DINKUM</a>
+        </div>
+    </header>
+
+    <div class="login-container">
+        <h2>Welcome Back</h2>
+        <form class="login-form">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <div class="remember-forgot">
+                <label>
+                    <input type="checkbox" name="remember"> Remember me
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+
+        <div class="signup-link">
+            Don't have an account? <a href="#">Sign up</a>
+        </div>
+    </div>
 </body>
 </html>
